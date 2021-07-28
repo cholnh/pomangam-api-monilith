@@ -9,6 +9,8 @@
 ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝╚═╝      ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝
 ```
 
+![example workflow](https://github.com/cholnh/pomangam-api-monolith/actions/workflows/ci-cd.yml/badge.svg)
+
 <br/>
 
 ### 사용기술
