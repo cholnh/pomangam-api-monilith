@@ -25,10 +25,10 @@ jobs:
 
       # replace
       - name: Replace
-      uses: datamonsters/replace-action
-      with:
-        files: 'src/main/resources/application.yml'
-        replacements: '$DB_IP=${{ secrets.DB_IP }},$DB_NAME=${{ secrets.$DB_NAME }},$DB_USERNAME=${{ secrets.$DB_USERNAME }},$DB_PASSWORD=${{ secrets.$DB_PASSWORD }}'
+        uses: datamonsters/replace-action
+        with:
+          files: 'src/main/resources/application.yml'
+          replacements: '$DB_IP=${{ secrets.DB_IP }},$DB_NAME=${{ secrets.$DB_NAME }},$DB_USERNAME=${{ secrets.$DB_USERNAME }},$DB_PASSWORD=${{ secrets.$DB_PASSWORD }}'
 
       # Java + Gradle 기반 앱 테스트 및 빌드
       - name: Set up JDK 1.8
