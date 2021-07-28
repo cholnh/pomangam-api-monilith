@@ -25,7 +25,7 @@ jobs:
 
       # replace
       - name: Replace
-        uses: datamonsters/replace-action
+        uses: datamonsters/replace-action@master
         with:
           files: 'src/main/resources/application.yml'
           replacements: '$DB_IP=${{ secrets.DB_IP }},$DB_NAME=${{ secrets.DB_NAME }},$DB_USERNAME=${{ secrets.DB_USERNAME }},$DB_PASSWORD=${{ secrets.DB_PASSWORD }}'
