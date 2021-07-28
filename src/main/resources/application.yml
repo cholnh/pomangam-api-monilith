@@ -88,5 +88,5 @@ file:
 static:
   resource:
     # 맥 location: /Users/nakzzi/Downloads/assets/ -> 확인필요.
-    location: file:///C:/assets/  # file download url
+    location: ./assets/  # file download url
 ---
