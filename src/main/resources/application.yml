@@ -35,9 +35,9 @@ spring:
   # DATASOURCE
   datasource:
     hikari:
-      jdbc-url: jdbc:mysql://$DBIP:3306/$DBNAME?useUnicode=true&characterEncoding=UTF-8&characterSetResults=UTF-8&useSSL=false&validationQuery=select 1&serverTimezone=Asia/Seoul
-      username: $DBUSERNAME
-      password: $DBPASSWORD
+      jdbc-url: jdbc:mysql://$DB_IP:3306/$DB_NAME?useUnicode=true&characterEncoding=UTF-8&characterSetResults=UTF-8&useSSL=false&validationQuery=select 1&serverTimezone=Asia/Seoul
+      username: $DB_USERNAME
+      password: $DB_PASSWORD
       connection-init-sql: "SET NAMES 'utf8mb4'"  # 이모지 사용
 
   # DATA REST
