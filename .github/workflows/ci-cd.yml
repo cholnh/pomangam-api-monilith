@@ -28,7 +28,7 @@ jobs:
         uses: datamonsters/replace-action
         with:
           files: 'src/main/resources/application.yml'
-          replacements: '$DBIP=${{ secrets.DB_IP }},$DBNAME=${{ secrets.$DB_NAME }},$DB_USERNAME=${{ secrets.$DB_USERNAME }},$DB_PASSWORD=${{ secrets.$DB_PASSWORD }}'
+          replacements: '$DBIP=${{ secrets.DB_IP }},$DBNAME=${{ secrets.$DB_NAME }},$DBUSERNAME=${{ secrets.$DB_USERNAME }},$DBPASSWORD=${{ secrets.$DB_PASSWORD }}'
 
       # Java + Gradle 기반 앱 테스트 및 빌드
       - name: Set up JDK 1.8
