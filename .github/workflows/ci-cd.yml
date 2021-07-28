@@ -23,15 +23,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      # MySQL
-      - name: Setup MySQL
-        uses: samin/mysql-action@v1
-        with:
-          character set server: 'utf8mb4'
-          mysql version: '5.7'
-          mysql database: ${{ secrets.MYSQL_DBNAME }}
-          mysql user: ${{ secrets.MYSQL_USERNAME }}
-          mysql password: ${{ secrets.MYSQL_PASSWORD }}
+      # replace
+      - name: Replace
+      uses: datamonsters/replace-action
+      with:
+        files: 'src/main/resources/application.yml'
+        replacements: '$DB_IP=${{ secrets.DB_IP }},$DB_NAME=${{ secrets.$DB_NAME }},$DB_USERNAME=${{ secrets.$DB_USERNAME }},$DB_PASSWORD=${{ secrets.$DB_PASSWORD }}'
 
       # Java + Gradle 기반 앱 테스트 및 빌드
       - name: Set up JDK 1.8
@@ -43,6 +40,7 @@ jobs:
         run: |
           chmod +x gradlew
           ./gradlew build
+
       # Gcloud CLI 세팅
       - name: Set up Gcloud
         uses: google-github-actions/setup-gcloud@master
