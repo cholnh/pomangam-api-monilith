@@ -23,22 +23,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      # replace
+      # replace secret
       - name: Replace
         uses: datamonsters/replace-action@master
         with:
           files: 'src/main/resources/application-prod.yml'
-          replacements:
-            $DB_IP=${{ secrets.DB_IP }},
-            $DB_NAME=${{ secrets.DB_NAME }},
-            $DB_USERNAME=${{ secrets.DB_USERNAME }},
-            $DB_PASSWORD=${{ secrets.DB_PASSWORD }},
-            $SERVER_PORT=${{ secrets.CONTAINER_PORT }},
-            $RABBITMQ_IP = ${{ secrets.RABBITMQ_IP }},
-            $RABBITMQ_PORT = ${{ secrets.RABBITMQ_PORT }},
-            $RABBITMQ_USERNAME = ${{ secrets.RABBITMQ_USERNAME }},
-            $RABBITMQ_PASSWORD = ${{ secrets.RABBITMQ_PASSWORD }}
-
+          replacements: '$DB_IP=${{ secrets.DB_IP }},$DB_NAME=${{ secrets.DB_NAME }},$DB_USERNAME=${{ secrets.DB_USERNAME }},$DB_PASSWORD=${{ secrets.DB_PASSWORD }},$SERVER_PORT=${{ secrets.CONTAINER_PORT }},$RABBITMQ_IP=${{ secrets.RABBITMQ_IP }},$RABBITMQ_PORT=${{ secrets.RABBITMQ_PORT }},$RABBITMQ_USERNAME=${{ secrets.RABBITMQ_USERNAME }},$RABBITMQ_PASSWORD=${{ secrets.RABBITMQ_PASSWORD }}'
 
       # Java + Gradle 기반 앱 테스트 및 빌드
       - name: Set up JDK 1.8
