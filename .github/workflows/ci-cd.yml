@@ -27,7 +27,7 @@ jobs:
       - name: Replace
         uses: datamonsters/replace-action@master
         with:
-          files: 'src/main/resources/application.yml'
+          files: 'src/main/resources/application-prod.yml'
           replacements: '$DB_IP=${{ secrets.DB_IP }},$DB_NAME=${{ secrets.DB_NAME }},$DB_USERNAME=${{ secrets.DB_USERNAME }},$DB_PASSWORD=${{ secrets.DB_PASSWORD }},$SERVER_PORT=${{ secrets.CONTAINER_PORT }}'
 
       # Java + Gradle 기반 앱 테스트 및 빌드
