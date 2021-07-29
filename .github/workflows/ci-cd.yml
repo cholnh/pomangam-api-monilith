@@ -23,7 +23,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      # replace
+      # replace secret
       - name: Replace
         uses: datamonsters/replace-action@master
         with:

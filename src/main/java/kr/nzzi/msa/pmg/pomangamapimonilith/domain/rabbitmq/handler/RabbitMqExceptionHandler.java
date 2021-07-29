@@ -14,10 +14,10 @@ public class RabbitMqExceptionHandler extends RejectAndDontRequeueRecoverer {
 
         final byte[] body = message.getBody();
         final String msg = new String(body, StandardCharsets.UTF_8);
-        log.error("===================");
+        log.error("====================");
         log.debug(msg);
         log.warn("Retries exhausted for message " + message, cause);
-        log.error("===================");
+        log.error("====================");
     }
 
 }
