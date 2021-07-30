@@ -21,7 +21,9 @@
     - Grafana, Prometheus
 
 - Operation
-    - GCE(GCP)/GCR
+    - Google Kubernetes Engine
+    - Google Container Registry
+    - Google Cloud SQL
     - Docker
     - Github Actions
    
