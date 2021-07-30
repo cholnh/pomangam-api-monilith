@@ -35,7 +35,7 @@
 ### 프로젝트 아키텍처 도식화
 |Server Architecture|
 |--|
-|![sys](https://github.com/cholnh/pomangam-api-monolith/blob/master/assets/images/architecture2.png)|
+|![sys](https://github.com/cholnh/pomangam-api-monolith/blob/master/assets/images/arch-with-kube.png)|
 
 <br/>
 
