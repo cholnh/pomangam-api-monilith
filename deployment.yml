@@ -6,6 +6,11 @@ metadata:
     app: mono-deployment
 spec:
   replicas: 2
+  strategy:
+    type: RollingUpdate
+#    rollingUpdate:
+#      maxUnvailable: 3 # 업데이트시 동시에 삭제할 수 있는 파드 최대 개수
+#      maxSurge: 4      # 업데이트시 동시에 생성될 수 있는 파드 최대 개수
   selector:
     matchLabels:
       app: mono-app
