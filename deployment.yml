@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mono-app
+  labels:
+    app: mono-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: mono-app
+  template:
+    metadata:
+      labels:
+        app: mono-app
+    spec:
+      containers:
+      - name: pmg-mono-container
+        image: gcr.io/nzzi-test-project/pomangam-api-monolith:latest
+        ports:
+        - containerPort: 9530

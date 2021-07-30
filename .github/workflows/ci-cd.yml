@@ -81,21 +81,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # SSH 접속을 통한 직접 배포
-      - name: Deploy to GCE
-        uses: appleboy/ssh-action@master
+      # "master" 체크아웃
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      # GKE deploy
+      - name: Deploy to GKE Cluster
+        uses: ameydev/gke-kubectl-action@master
+        env:
+          PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+          APPLICATION_CREDENTIALS: ${{ secrets.GCP_SA_KEY }}
+          CLUSTER_NAME: ${{ secrets.GKE_CLUSTER_NAME }}
+          ZONE_NAME: ${{ secrets.GKE_CLUSTER_ZONE }}
         with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USERNAME }}
-          key: ${{ secrets.SSH_KEY }}
-          passphrase: ${{ secrets.SSH_PASSPHRASE }}
-          script: |
-            CONTAINER_NAME=pmg-mono-container
-            IMAGE=gcr.io/${{ secrets.GCP_PROJECT_ID }}/${{ secrets.REPOSITORY_NAME }}
-            sudo gcloud --quiet auth configure-docker
-            sudo docker ps -q --filter "name=$CONTAINER_NAME" | grep -q . && sudo docker stop $CONTAINER_NAME
-            sudo docker system prune -a -f
-            sudo docker run -d --name "$CONTAINER_NAME" --rm -p ${{ secrets.CONTAINER_PORT }}:${{ secrets.CONTAINER_PORT }} $IMAGE:latest
+          args: apply -f ./deployment.yml
+
       # 작업 결과 슬랙 전송
       - name: Result to Slack
         uses: 8398a7/action-slack@v3
