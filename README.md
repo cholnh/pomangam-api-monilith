@@ -41,10 +41,18 @@
 
 <br/>
 
-### 스크린샷
+### 고객앱 스크린샷
 |시연영상|업체화면|제품화면|장바구니|주문목록|
 |--|--|--|--|--|
 |[![n11](https://user-images.githubusercontent.com/23611497/111357454-ad11b000-86cc-11eb-8f7f-cd44a44049ab.png)](https://user-images.githubusercontent.com/23611497/110623244-ed11f800-81df-11eb-96cb-ed391994d3ed.mp4)|![n22](https://user-images.githubusercontent.com/23611497/111357550-c1ee4380-86cc-11eb-8117-47f0c708b84f.png)|![n33](https://user-images.githubusercontent.com/23611497/111357630-d2062300-86cc-11eb-98ac-26894705cc35.png)|![n44](https://user-images.githubusercontent.com/23611497/111357668-dcc0b800-86cc-11eb-8fac-16a502711393.png)|![n55](https://user-images.githubusercontent.com/23611497/111357697-e1856c00-86cc-11eb-9f66-334381f6aa89.png)|
+
+<br/>
+
+### 사장님앱 스크린샷
+
+|메인화면|주문접수화면|주문상세화면|주문내역화면|
+|--|--|--|--|
+|![screenshot (4)](https://user-images.githubusercontent.com/23611497/110626212-ca81de00-81e3-11eb-983f-f5049ef948d1.png)|![screenshot (1)](https://user-images.githubusercontent.com/23611497/110626228-cfdf2880-81e3-11eb-9427-b732eed4410b.png)|![screenshot (2)](https://user-images.githubusercontent.com/23611497/110626240-d40b4600-81e3-11eb-82d3-f2efaad48b66.png)|![screenshot (3)](https://user-images.githubusercontent.com/23611497/110626246-d7063680-81e3-11eb-8b46-4cf8772b3254.png)|
 
 <br/>
 
